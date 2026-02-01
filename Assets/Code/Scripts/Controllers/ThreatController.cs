@@ -24,7 +24,7 @@ public class ThreatController : MonoBehaviour
 
     public void Threat()
     {
-        var hit = Physics.OverlapSphere(threatPoint.position, 0.5f, visitorLayer);
+        var hit = Physics.OverlapSphere(threatPoint.position, 1f, visitorLayer);
         if (hit.Length != 0)
         {
             if (hit[0].gameObject.TryGetComponent(out Visitor visitor))

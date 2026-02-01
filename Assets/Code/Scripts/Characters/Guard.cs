@@ -88,7 +88,7 @@ public class Guard : MonoBehaviour
         {
             if (canSee)
             {
-                if (playerScript != null && playerScript.IsTreat)
+                if (playerScript != null && playerScript.GetComponent<AnimationController>().GetThreat())
                 {
                     detectionTimer = timeToDetect;
                     SwitchState(EnemyState.Chase);

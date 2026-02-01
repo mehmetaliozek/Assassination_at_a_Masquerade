@@ -18,7 +18,7 @@ public class KillController : MonoBehaviour
 
     public void Kill()
     {
-        var hit = Physics.OverlapSphere(killPoint.position, 0.5f, visitorLayer);
+        var hit = Physics.OverlapSphere(killPoint.position, 1f, visitorLayer);
         if (hit.Length != 0)
         {
             if (hit[0].gameObject.TryGetComponent(out Visitor visitor))

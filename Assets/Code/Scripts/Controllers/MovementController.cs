@@ -15,7 +15,7 @@ public class MovementController : MonoBehaviour
 
     public void Move(float x, float z)
     {
-        Vector3 move = new Vector3(x, 0, z) * speed;
+        Vector3 move = new Vector3(x * speed, 0, z * speed / 2);
         Vector3 y = new Vector3(0, rb.linearVelocity.y, 0);
 
         rb.linearVelocity = (move + y);
@@ -28,7 +28,7 @@ public class MovementController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        else if (rb.linearVelocity.x > 1)
+        else if (rb.linearVelocity.x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }

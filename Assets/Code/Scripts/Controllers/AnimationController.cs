@@ -12,11 +12,27 @@ public class AnimationController : MonoBehaviour
 
     public void Threat()
     {
-        animator.SetTrigger("Threat");
+        animator.SetBool("Threat", true);
     }
+
+    public void ThreatFalse()
+    {
+        animator.SetBool("Threat", false);
+    }
+
+    public bool GetThreat() => animator.GetBool("Threat");
+
 
     public void Kill()
     {
-        animator.SetTrigger("Kill");
+        animator.SetBool("Kill", true);
     }
+
+    public void KillFalse()
+    {
+        animator.SetBool("Kill", false);
+    }
+
+    public bool GetKill() => animator.GetBool("Kill");
+
 }
